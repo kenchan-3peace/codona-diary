@@ -15,10 +15,22 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.urls import path
 from django.urls import path, include
+from django.conf.urls.i18n import i18n_patterns
+from django.contrib.staticfiles.urls import static
+
+from . import settings_common, settings_dev
 
 
-urlpatterns = [
+
+urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('', include('diary.urls')),
-]
+    path('accounts/', include('allauth.urls')),
+    prefix_default_language=False
+)
+
+#開発サーバーでメディアを配信できるように設定
+urlpatterns += static(settings_common.MEDIA_URL, document_root=settings_dev.MEDIA_ROOT)
+

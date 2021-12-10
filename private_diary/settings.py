@@ -23,11 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-6l^c3blbf34981kalgxr4m1z017684^8@_%eepbzp==@)f&@8d'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+# django-allauthで利用するdjango.contrib.sitesを使うたまにサイト識別用IDを設定
+SITE_ID = 1
 
 # Application definition
 
@@ -38,8 +35,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'diary.apps.DiaryConfig',
+    'accounts.apps.AccountsConfig',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'widget_tweaks',
+    'diary.apps.DiaryConfig'
+
 ]
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -168,3 +173,6 @@ LOGGING = {
         },
     }
 }
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)

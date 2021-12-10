@@ -1,0 +1,22 @@
+body, #wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#id_remember{
+    height: 25px;
+    width: 25px;
+}
+
+.img_size{
+    height: 250px;
+    width: auto;
+}
+
+footer{
+    margin-top: auto;
+}
+.my-div-style{
+    margin-top: 6rem;
+}
+
