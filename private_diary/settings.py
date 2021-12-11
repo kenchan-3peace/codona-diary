@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -177,5 +176,3 @@ LOGGING = {
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-# Activate Django-Heroku.
-django_heroku.settings(locals())
