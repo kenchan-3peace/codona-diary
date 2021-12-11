@@ -3,7 +3,8 @@ from .settings_common import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['codona-diary.herokuapp.com']
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 from django.utils.translation import ugettext_lazy as _
