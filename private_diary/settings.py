@@ -180,12 +180,6 @@ LOGGING = {
         },
     }
 }
-#STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-#)
-
-STATIC_ROOT = ''
-
 STATICFILES_DIRS = (
-     os.path.join('static'),
+     os.path.join(BASE_DIR, 'static'),
 )
