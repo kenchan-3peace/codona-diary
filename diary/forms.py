@@ -39,7 +39,9 @@ class InquiryForm(forms.Form):
         cc_list = [
             ''
         ]
-        inquiry = 'codona.info@gmail.com'
+        inquiry = [
+            'codona.info@gmail.com'
+        ]
 
         message1 = EmailMessage(subject=subject, body=message1, from_email=from_email, to=to_list,cc=cc_list)
         message1.send()
