@@ -30,7 +30,8 @@ class InquiryForm(forms.Form):
         message = self.cleaned_data['message']
 
         subject = '【お問い合わせ】 {}'.format(title)
-        message = '以下の内容で問い合わせを行いました。\n\n送信者名: {0}\nメールアドレス:{1}\nメッセージ:{2}'.format(name,email,message)
+        message1 = '以下の内容で問い合わせを行いました。\n\n送信者名: {0}\nメールアドレス:{1}\nメッセージ:{2}'.format(name,email,message)
+        message2 = '以下問い合わせを受けました。\n\n送信者名: {0}\nメールアドレス:{1}\nメッセージ:{2}'.format(name, email, message)
         from_email = 'codona.info@gmail.com'
         to_list = [
             email
@@ -38,9 +39,12 @@ class InquiryForm(forms.Form):
         cc_list = [
             ''
         ]
+        inquiry = 'codona.info@gmail.com'
 
-        message = EmailMessage(subject=subject, body=message, from_email=from_email, to=to_list,cc=cc_list)
-        message.send()
+        message1 = EmailMessage(subject=subject, body=message1, from_email=from_email, to=to_list,cc=cc_list)
+        message1.send()
+        message2 = EmailMessage(subject=subject, body=message2, from_email=from_email, to=inquiry,cc=cc_list)
+        message2.send()
 
 class DiaryCreateForm(forms.ModelForm):
     class Meta:
