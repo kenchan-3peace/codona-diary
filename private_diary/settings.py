@@ -108,7 +108,7 @@ DATABASES = {
         'USER': 'eqbaumpipnabzf',
         'PASSWORD': '2fe07e1b66debd16c46a9469644983aa1c927a67f1b63923985703c730714102',
         'HOST': 'ec2-34-233-214-228.compute-1.amazonaws.com',
-        'PORT': '5432'
+        'PORT': '5432',
         'PATH': '',
     }
 }
