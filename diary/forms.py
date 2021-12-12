@@ -33,7 +33,7 @@ class InquiryForm(forms.Form):
         message = '送信者名: {0}\nメールアドレス:{1}\nメッセージ:{2}'.format(name,email,message)
         from_email = 'admin@example.com'
         to_list = [
-            'test@example.com'
+            'kechan.3peace@gmail.com'
         ]
         cc_list = [
             email
