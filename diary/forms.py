@@ -29,14 +29,14 @@ class InquiryForm(forms.Form):
         title = self.cleaned_data['title']
         message = self.cleaned_data['message']
 
-        subject = 'お問い合わせ {}'.format(title)
-        message = '送信者名: {0}\nメールアドレス:{1}\nメッセージ:{2}'.format(name,email,message)
-        from_email = 'admin@example.com'
+        subject = '【お問い合わせ】 {}'.format(title)
+        message = '以下の内容で問い合わせを行いました。\n\n送信者名: {0}\nメールアドレス:{1}\nメッセージ:{2}'.format(name,email,message)
+        from_email = 'codona.info@gmail.com'
         to_list = [
-            'kenchan.3peace@gmail.com'
+            email
         ]
         cc_list = [
-            email
+            ''
         ]
 
         message = EmailMessage(subject=subject, body=message, from_email=from_email, to=to_list,cc=cc_list)
