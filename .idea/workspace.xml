@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bddbd6a-f73d-41d4-ab0d-350db19ff0e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diary/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diary/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/diary/templates/diary_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/diary/templates/diary_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/private_diary/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/private_diary/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
