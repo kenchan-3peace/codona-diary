@@ -1,6 +1,6 @@
 from accounts.models import CustomUser
 from django.db import models
-
+from cloudinary.models import CloudinaryField
 
 class Diary(models.Model):
     """日記モデル"""
@@ -19,3 +19,7 @@ class Diary(models.Model):
 
     def __str__(self):
         return self.title
+
+class TestModel(models.Model):
+    name = models.CharField(max_length=10)
+    image = models.ImageField(upload_to="image/", blank=True)

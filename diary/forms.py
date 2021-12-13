@@ -43,7 +43,7 @@ class InquiryForm(forms.Form):
             'codona.info@gmail.com'
         ]
 
-        message1 = EmailMessage(subject=subject, body=message1, from_email=from_email, to=to_list,cc=cc_list)
+        message1 = EmailMessage(subject=subject1, body=message1, from_email=from_email, to=to_list,cc=cc_list)
         message1.send()
         message2 = EmailMessage(subject=subject, body=message2, from_email=from_email, to=inquiry,cc=cc_list)
         message2.send()

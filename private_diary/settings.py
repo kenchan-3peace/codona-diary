@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = os.environ["EMAIL_HOST_USER"]
-EMAIL_HOST_PASSWORD = os.environ["EMAIL_HOST_PASSWORD"]
-DEFAULT_FROM_EMAIL = os.environ["DEFAULT_FROM_EMAIL"]
+if DEBUG == True:
+    EMAIL_HOST_USER = os.environ["EMAIL_HOST_USER"]
+    EMAIL_HOST_PASSWORD = os.environ["EMAIL_HOST_PASSWORD"]
+    DEFAULT_FROM_EMAIL = os.environ["DEFAULT_FROM_EMAIL"]
 EMAIL_USE_TLS = True
 
 # Quick-start development settings - unsuitable for production
@@ -52,9 +53,19 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'widget_tweaks',
+    'cloudinary',
+    'cloudinary_storage',
     'diary.apps.DiaryConfig'
 
 ]
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'kenchan',
+    'API_KEY': '458132695173794',
+    'API_SECRET': 'B082QUrF2uhW0bQXUsxGafHwvLk'
+}
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
